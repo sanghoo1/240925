@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+body{
+  font-family: 'SpoqaHanSans',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', '맑은 고딕', 돋움, sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+article{
+  height: 300vh;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-top: 200px;
+}
+
+h1{
+  background-color: #40a2e3;
+  color: #fff;
+  height: 140px; /* 패딩을 줘도 되고 높이 값주고 정렬해도 됨 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gnb{
+  position: sticky;
+  top:0;
+  background-color: #0d9276;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  height: 50px; /* 헤더 영역은 높이 값 지정되는 경우 많음 */
+}
+
+.gnb li{
+  width: 200px;
+  min-width: 130px; /* a에 블록속성을 줄거라서 li에 주면 된다.*/
+}
+.gnb > li > a{ /* ul 다음 li 다음 a가 나오는 부분은 4개이다. */
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  border-right: 1px solid #fff;
+}
+.gnb > li:last-child > a{
+  border: none;
+}
+.gnb > li > a:hover{
+  background-color: #bbe2ec;
+  color: #0d9276;
+}
+
+/* 각 각의 소메뉴 */
+.gnb li .menu{
+  display: none;
+}
+/* 각 대메뉴에 마우스를 올리면, 해당 대메뉴의 소메뉴가 나타남*/
+.gnb > li:hover .menu{
+  display: block;
+}
+.gnb li .menu a{
+  background-color: #0d9276;
+  display: block;
+  font-size: 1.1rem;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #fff;
+}
+.gnb li .menu a:hover{
+  background-color: #bbe2ec;
+  color: #0d9276;
+}
+.gnb li .menu li:last-child a{
+  border: none;
+}

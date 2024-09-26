@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition-delay</title>
+    <style>
+      body{
+        text-align: center;
+      }
+      .container{
+        border: 2px solid #000;
+        width: 90%; height: 600px;
+        margin: 0 auto;
+        display: flex;
+        list-style: none;
+        padding: 0;
+        justify-content: space-around;
+        
+      }
+      ul li{
+        background-color: bisque;
+        width: 20%;
+        
+        margin: 4px;
+        height: 30px;
+        line-height: 30px;
+        transition-property: all;
+        transition-duration: 1s; /* 이벤트가 일어나기 전에 transition 값을 주는 게 맞다. */
+      }
+      ul:hover li:nth-child(1) {
+        height: calc(100% - 8px);
+        background-color: aqua;
+      }
+      ul:hover li:nth-child(2) {
+        height: calc(100% - 8px);
+        background-color: rgb(39, 192, 115);
+        
+        transition-delay: 0.5s;
+
+      }
+      ul:hover li:nth-child(3) {
+        height: calc(100% - 8px);
+        background-color: rgb(225, 0, 255);
+       
+        transition-delay: 1s;
+
+      }
+      ul:hover li:nth-child(4) {
+        height: calc(100% - 8px);
+        background-color: rgb(228, 139, 23);
+     
+        transition-delay: 2s;
+      }
+      ul:hover li:nth-child(5) {
+        height: calc(100% - 8px);
+        background-color: rgb(196, 189, 100);
+        
+        transition-delay: 3s;
+      }
+    </style>
+</head>
+<body>
+  <h1>transition-delay</h1>
+    <ul class="container">
+      <li>바로진행</li>
+      <li>0.5초</li>
+      <li>1초</li>
+      <li>2초</li>
+      <li>3초</li>
+    </ul>
+  
+</body>
+</html>
